@@ -24,7 +24,10 @@ description = st.text_area(
     "Rental description",
     "Beautiful renovated apartment with hardwood floors, elevator, laundry and subway access."
 )
-
+feature_text = st.text_area(
+"feature_text",
+ "Doorman Elevator Hardwood Floors Laundary"
+)
 if st.button("Predict Interest Level"):
     row = pd.DataFrame([{
         "bathrooms": bathrooms,
@@ -37,6 +40,7 @@ if st.button("Predict Interest Level"):
         "listing_hour": listing_hour,
         "listing_dayofweek": listing_dayofweek,
         "description": description
+        "feature_text":feature_text
     }])
 
     prediction = model.predict(row)[0]
