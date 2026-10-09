@@ -39,7 +39,7 @@ if st.button("Predict Interest Level"):
         "photo_count": photo_count,
         "listing_hour": listing_hour,
         "listing_dayofweek": listing_dayofweek,
-        "description": description
+        "description": description,
         "feature_text":feature_text
     }])
 
